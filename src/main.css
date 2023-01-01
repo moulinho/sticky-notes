@@ -1,0 +1,41 @@
+body {
+  background: url("../public/assets/210316-nature-forest-lake-748x421.jpg")
+    no-repeat;
+  margin: 0;
+  background-size: calc(100% + 90px);
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  padding: 24px;
+  gap: 24px;
+}
+.note {
+  height: 200px;
+  box-sizing: border-box;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+  resize: none;
+  font-family: sans-serif;
+  font-size: 16px;
+  animation: slideUp 1s ease forwards 0.8s;
+}
+
+.add-note {
+  height: 200px;
+  border: none;
+  outline: none;
+  border-radius: 10%;
+  background: rgba(255, 255, 255, 0.634);
+  font-size: 120px;
+  color: rgba(44, 44, 44, 0.5);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-note:hover {
+  background: rgba(255, 255, 255, 0.788);
+}
