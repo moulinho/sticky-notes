@@ -1,9 +1,3 @@
-window.onload = (event) =>{
-  console.log(event);
-    alert(`To delete a note, double click on it ${String.fromCodePoint(0x1F60A)}` );
- };
-
-
 const notesContainer = document.getElementById("app");
 
 const addNoteButton = notesContainer.querySelector(".add-note");
@@ -19,7 +13,16 @@ const saveNotes = (notes) => {
 };
 
 const createNoteElement = (id, content) => {
+  const div = document.createElement("div");
+
   const element = document.createElement("textarea");
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.value = "X";
+  button.innerText = "X";
+  button.classList.add("deleteButton");
+  button.style.cursor = "pointer";
 
   element.classList.add("note");
   element.value = content;
@@ -30,11 +33,17 @@ const createNoteElement = (id, content) => {
   element.addEventListener("change", () => {
     updateNote(id, element.value);
   });
-  element.addEventListener("dblclick", () => {
+
+
+
+  button.addEventListener("click", () => {
     const doDelete = confirm("Deleted are you sur ?");
-    doDelete ? deleteNote(id, element) : "";
+    doDelete ? deleteNote(id, div) : "";
   });
-  return element;
+  div.classList.add("mainDiv");
+  div.append(button, element);
+
+  return div;
 };
 
 getNotes().forEach((note) => {

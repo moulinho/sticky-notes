@@ -11,6 +11,10 @@ body {
   padding: 24px;
   gap: 24px;
 }
+.mainDiv {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+}
 .note {
   height: 200px;
   box-sizing: border-box;
@@ -38,4 +42,11 @@ body {
 
 .add-note:hover {
   background: rgba(255, 255, 255, 0.788);
+}
+.deleteButton {
+  position: absolute;
+  width: 25px;
+  margin: 7px 165px;
+  border-radius: 6px;
+  border: none;
 }
