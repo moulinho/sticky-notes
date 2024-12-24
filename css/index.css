@@ -1,9 +1,11 @@
 
 body {
-  background: url("../image/210316-nature-forest-lake-748x421.jpg")
-    no-repeat;
+  background: url("../image/210316-nature-forest-lake-748x421.jpg") no-repeat center center fixed;
   margin: 0;
-  background-size: calc(100% + 90px);
+  padding: 0;
+  background-size: cover;
+  height: 100vh; /* Assure que le body remplit toute la hauteur */
+  width: 100vw; 
 }
 
 #app {
